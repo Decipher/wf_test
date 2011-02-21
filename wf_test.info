@@ -1,6 +1,7 @@
 core = "6.x"
 dependencies[] = "better_formats"
 dependencies[] = "features"
+dependencies[] = "imageapi_gd"
 dependencies[] = "imagecache"
 dependencies[] = "imagefield"
 dependencies[] = "input_formats"
