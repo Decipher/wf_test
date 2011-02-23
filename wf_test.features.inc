@@ -145,6 +145,6 @@ function wf_test_node_info() {
  */
 function wf_test_wysiwyg_fields_icons() {
   return array(
-    drupal_get_path('module', 'wf_test') . '/assets/wysiwyg_fields',
+    drupal_get_path('module', 'wf_test') . '/images/wysiwyg_fields',
   );
 }
