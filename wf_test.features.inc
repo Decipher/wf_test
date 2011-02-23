@@ -35,6 +35,34 @@ function wf_test_imagecache_default_presets() {
         ),
       ),
     ),
+    'wf_250x250' => array(
+      'presetname' => 'wf_250x250',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '250',
+            'height' => '250',
+          ),
+        ),
+      ),
+    ),
+    'wf_400x400' => array(
+      'presetname' => 'wf_400x400',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '400',
+            'height' => '400',
+          ),
+        ),
+      ),
+    ),
     'wf_collage_h' => array(
       'presetname' => 'wf_collage_h',
       'actions' => array(

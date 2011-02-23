@@ -75,13 +75,6 @@ function wf_test_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_page';
-  $strongarm->value = 0;
-
-  $export['comment_page'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_wf_test';
   $strongarm->value = '1';
 
@@ -106,12 +99,12 @@ function wf_test_strongarm() {
   $strongarm->name = 'content_extra_weights_wf_test';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '0',
-    'revision_information' => '20',
-    'author' => '20',
-    'options' => '25',
-    'comment_settings' => '30',
-    'menu' => '-2',
+    'body_field' => '-3',
+    'revision_information' => '-1',
+    'author' => '-2',
+    'options' => '0',
+    'comment_settings' => '1',
+    'menu' => '-4',
   );
 
   $export['content_extra_weights_wf_test'] = $strongarm;
@@ -139,14 +132,5 @@ function wf_test_strongarm() {
   $strongarm->value = 'cube';
 
   $export['theme_default'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'theme_settings';
-  $strongarm->value = array(
-    'toggle_node_info_page' => FALSE,
-  );
-
-  $export['theme_settings'] = $strongarm;
   return $export;
 }

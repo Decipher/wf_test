@@ -44,7 +44,7 @@ function wf_test_custom_formatters_defaults() {
       'mode' => 'advanced',
       'code' => '$output = \'\';
     foreach (element_children($element) as $child) {
-      $output .= "<div style=\'padding-right: 10px; float: left;\'>" . theme(\'imagecache\', \'small\', $element[$child][\'#item\'][\'filepath\']) . "</div>";
+      $output .= "<div style=\'padding-right: 10px; float: left;\'>" . theme(\'imagecache\', \'wf_100x100\', $element[$child][\'#item\'][\'filepath\']) . "</div>";
     }
 
     return "
@@ -63,11 +63,28 @@ function wf_test_custom_formatters_defaults() {
       'description' => '',
       'mode' => 'basic',
       'code' => '<div style="float: left; padding: 5px 10px 10px 0; position: relative;">
-      <img src="/[filefield-imagecache-medium]" />
+      <img src="/[filefield-imagecache-wf_250x250]" />
       <div style="background-color: #000; bottom: 10px; color: #FFF; opacity: 0.6; position: absolute; width: 250px;">
         <div style="padding: 10px;">[filefield-description]</div>
       </div>
     </div>',
+      'status' => '1',
+      'source' => 'module',
+    ),
+    'wf_link_screenshot' => array(
+      'name' => 'wf_link_screenshot',
+      'label' => 'Wysiwyg Fields: Link: Screenshot',
+      'field_types' => 'a:1:{i:0;s:4:"link";}',
+      'multiple' => '0',
+      'description' => '',
+      'mode' => 'advanced',
+      'code' => 'return "
+    <div style=\'background-color: #000; display: block; float: left; margin: 5px 10px 10px 0; padding: 2px; text-align: center; width: 120px;\'>
+      <a href=\'{$element[\'#item\'][\'url\']}\' style=\'color: #fff;\'>
+        <img src=\'http://images.shrinktheweb.com/xino.php?stwembed=1&stwaccesskeyid=73a0f3eebb3c2a1&stwsize=sm&stwurl={$element[\'#item\'][\'url\']}\' style=\'display: block;\' />
+        {$element[\'#item\'][\'title\']}
+      </a>
+    </div>";',
       'status' => '1',
       'source' => 'module',
     ),
