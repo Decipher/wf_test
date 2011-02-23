@@ -55,7 +55,10 @@ function wf_test_content_default_fields() {
       'wysiwyg_fields_status' => 1,
       'wysiwyg_fields_icon' => 'd50522754f0bc7cc44d2f5231a467fe8',
       'wysiwyg_fields_formatters' => array(
-        '100x100_default' => '100x100_default',
+        'custom_formatters_wf_collage' => 'custom_formatters_wf_collage',
+        'custom_formatters_wf_gallery' => 'custom_formatters_wf_gallery',
+        'custom_formatters_wf_img_caption' => 'custom_formatters_wf_img_caption',
+        'wf_100x100_default' => 'wf_100x100_default',
       ),
       'wysiwyg_fields_hide' => 1,
       'wysiwyg_fields_delete' => 1,

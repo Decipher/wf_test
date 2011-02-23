@@ -21,8 +21,8 @@ function wf_test_ctools_plugin_api() {
  */
 function wf_test_imagecache_default_presets() {
   $items = array(
-    '100x100' => array(
-      'presetname' => '100x100',
+    'wf_100x100' => array(
+      'presetname' => 'wf_100x100',
       'actions' => array(
         '0' => array(
           'weight' => '0',
@@ -31,6 +31,48 @@ function wf_test_imagecache_default_presets() {
           'data' => array(
             'width' => '100',
             'height' => '100',
+          ),
+        ),
+      ),
+    ),
+    'wf_collage_h' => array(
+      'presetname' => 'wf_collage_h',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '378',
+            'height' => '92',
+          ),
+        ),
+      ),
+    ),
+    'wf_collage_v1' => array(
+      'presetname' => 'wf_collage_v1',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '184',
+            'height' => '92',
+          ),
+        ),
+      ),
+    ),
+    'wf_collage_v2' => array(
+      'presetname' => 'wf_collage_v2',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '184',
+            'height' => '194',
           ),
         ),
       ),
@@ -44,6 +86,17 @@ function wf_test_imagecache_default_presets() {
  */
 function wf_test_node_info() {
   $items = array(
+    'page' => array(
+      'name' => t('Page'),
+      'module' => 'features',
+      'description' => t('A <em>page</em>, similar in form to a <em>story</em>, is a simple method for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a <em>page</em> entry does not allow visitor comments and is not featured on the site\'s initial home page.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '1',
+      'body_label' => t('Body'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
     'wf_test' => array(
       'name' => t('Wysiwyg Fields test'),
       'module' => 'features',
